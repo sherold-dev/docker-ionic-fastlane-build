@@ -15,7 +15,6 @@ RUN apt-get update && apt-get install -y curl git ca-certificates ruby-full less
 
 RUN gem install fastlane -NV
 RUN gem install bundler:2.0.1
-RUN fastlane add_plugin ionic
 
 ENV CORDOVA_VERSION 8.1.2
 ENV IONIC_VERSION 4.12.0
