@@ -1,10 +1,8 @@
 FROM lovato/docker-android:latest
 
-MAINTAINER Martin Foerster <martin@atroo.de>
-
 ENV NODEJS_VERSION=8.12.0 \
     PATH=$PATH:/opt/node/bin
- 
+
 ENV LC_ALL=en_US.UTF-8 \
     LANG=en_US.UTF-8
 
@@ -17,8 +15,8 @@ RUN apt-get update && apt-get install -y curl git ca-certificates ruby-full less
 
 RUN gem install fastlane -NV
 
-ENV CORDOVA_VERSION 8.0.0
-ENV IONIC_VERSION 3.20.1
+ENV CORDOVA_VERSION 8.1.2
+ENV IONIC_VERSION 4.12.0
 
 WORKDIR "/tmp"
 
