@@ -17,10 +17,12 @@ RUN gem install fastlane -NV
 RUN gem install bundler:2.0.1
 
 ENV CORDOVA_VERSION 8.1.2
+ENV CORDOVA_RES_VERSION 0.3.0
 ENV IONIC_VERSION 4.12.0
 
 WORKDIR "/tmp"
 
 RUN npm i -g --unsafe-perm cordova@${CORDOVA_VERSION}
+RUN npm i -g --unsafe-perm cordova-res@${CORDOVA_RES_VERSION}
 RUN npm i -g --unsafe-perm ionic@${IONIC_VERSION}
 
